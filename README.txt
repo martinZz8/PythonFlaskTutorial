@@ -28,3 +28,26 @@ Note: Server runs at url: "localhost:5000"
 
 6. Deactivate virtualenv (while beeing in active environment):
 	"deactivate"
+
+
+Additional:
+a) Creation of database:
+- Enable virtualenv (3rd point),
+- Move to "src" folder,
+- Run "python" and write:
+>>> from app import app, db
+>>> app.app_context().push()
+>>> db.create_all()
+Db is created in folder "src\instance\test.db"
+
+b) Updating database (https://flask-migrate.readthedocs.io/en/latest/):
+- Enable virtualenv (3rd point),
+- Move to "src" folder,
+- Install pip "Flask-Migrate" package,
+- In project import "flask_migrate" from "Migrate" and create instation of migration: "migrate = Migrate(app, db)",
+- In opened virtualenv terminal do:
+	- Create migration repository: "python -m flask db init",
+	- Generate initial migration: "python -m flask db migrate -m 'Initial migration.'",
+	- Apply changes described in migration script to db: "python -m flask db upgrade".	
+
+Each time the database models change, repeat the "migrate" and "upgrade" commands.

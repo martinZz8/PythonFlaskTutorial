@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Update Task</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <form action="/todo/update/{{ task.id }}" method="POST">
+        <input type="text" name="content" value={{ task.content }}/>
+        <input type="submit" value="Update Task"/>
+    </form>
+</div>
+
+<style scoped>
+    .content {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        margin-top: 10px;
+    }
+</style>
+{% endblock %}
