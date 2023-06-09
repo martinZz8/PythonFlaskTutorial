@@ -74,7 +74,7 @@ def getTodo(id):
         # We have it in 'id' parameter, but the same is "id = request.view_args['id']"
 
         # Get item by id
-        task = Todo.query.get(id) #optionally filter: "Todo.query.filter(Todo.id==todoId).first()" or "Todo.query.filter_by(id=todoId).first()"
+        task = Todo.query.get(id) #optionally filter: "Todo.query.filter(Todo.id==id).first()" or "Todo.query.filter_by(id=id).first()"
 
         return render_template("task.html", task=task)
         #Note:  to return Json data, return stringified dictionary:
