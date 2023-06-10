@@ -62,15 +62,28 @@ def getTodo(id):
     if (request.method == "GET"):
         # 1) Getting query params (i.e. ?user=some-value):
         # varUser = request.args.get('user')
-
-        # 2) Getting request body (passed in JSON format):
+        
+        # 2) Getting standard HTML form via "application/x-www-form-urlencoded" content type (passed in body)
+        # -- OLNY IN POST --
+        # -- url send: https://stackoverflow.com/questions/35325370/how-do-i-post-a-x-www-form-urlencoded-request-using-fetch --
+        # val = request.form['valName'] # or "request.form.get('valName')"
+        
+        # 3) Getting "multipart/form-data" content type (passed in body)
+        # -- OLNY IN POST --
+        # -- url send: https://stackoverflow.com/questions/35192841/how-do-i-post-with-multipart-form-data-using-fetch --
+        # -- url encode: https://stackoverflow.com/questions/40414526/how-to-read-multipart-form-data-in-flask --
+        # vals = request.form.to_dict() # or "dict(request.form)"
+        
+        # 4) Getting request body passed in body in JSON format (content type "application/json")
+        # -- ONLY IN POST --
+        # in js send it using fetch API, in body with usage of JSON.stringify(...) method
         #jsonData = request.json #The request must have the application/json content type
         #jsonData = request.get_json(force=True) #ignores the content type
         #Note1: "jsonData" in dictionary
         #Note2: "loads" from "json" converts json string to Python dictionary
         #Note3: "load" from "json" converts opened json file handle to Python dictionary (file is opened by "open('data.json')")
 
-        # 3) Getting parh variable:
+        # 5) Getting parh variable:
         # We have it in 'id' parameter, but the same is "id = request.view_args['id']"
 
         # Get item by id
