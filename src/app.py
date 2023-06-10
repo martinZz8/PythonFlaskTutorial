@@ -90,6 +90,7 @@ def getTodo(id):
         task = Todo.query.get(id) #optionally filter: "Todo.query.filter(Todo.id==id).first()" or "Todo.query.filter_by(id=id).first()"
 
         return render_template("task.html", task=task)
+        # from: https://stackoverflow.com/questions/13081532/return-json-response-from-flask-view
         #Note:  to return Json data, return stringified dictionary:
         #       return jsonify(data) - "jsonify" is imported from "flask"
         # OR
