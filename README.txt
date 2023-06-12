@@ -51,3 +51,12 @@ b) Updating database (https://flask-migrate.readthedocs.io/en/latest/):
 	- Apply changes described in migration script to db: "python -m flask db upgrade".	
 
 Each time the database models change, repeat the "migrate" and "upgrade" commands.
+
+c) Copy complete virtualenv to another pc (https://stackoverflow.com/questions/34993200/copy-complete-virtualenv-to-another-pc):
+1) On source machine:
+- Enable virtualenv (3rd point),
+- Create requirements file: "python -m pip freeze > requirements.txt",
+2) On other pc:
+- Copy "requirements.txt" from source machine to destination pc,
+- Enable virtualenv (3rd point),
+- Install requirements: "python -m pip install -r requirements.txt".
