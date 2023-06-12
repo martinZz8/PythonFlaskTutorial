@@ -22,7 +22,7 @@ Note: 	Don't use "py -3 -m pip install ...". Here our python.exe is in folder "e
 	So just simply use "python -m pip install ..."
 		
 5. Run prepared scipt with:
-	"python srsc/app.py" (or change directory of main file)
+	"python src/app.py" (or change directory of main file)
 	
 Note: Server runs at url: "localhost:5000"
 
