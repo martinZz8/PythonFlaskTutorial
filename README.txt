@@ -1,5 +1,6 @@
 To run project in virtualenv, do those steps:
 1. Install "virtualenv" via pip
+Note: Yuo can also use "venv" instead of "virtualenv". But "virtualenv" is more popular and powerful than "venv".
 
 2. Create virtualenv "env" folder by using:
 	"py -3 -m virtualenv env"
@@ -15,10 +16,10 @@ Note1: 	When "Script cannot be loaded because running scripts is disabled on thi
 Note2: 	1) "./script" runs the script as an executable file, launching a new shell to run it
 	2) ". script" or "source script" reads and executes commands from filename in the current shell environment
 		
-4. Install required packages via pip: "flask" and "flask-sqlalchemy".
-Installed libraries should be visible in "env\Lib\site-packages" folder
-
-Note: 	Don't use "py -3 -m pip install ...". Here our python.exe is in folder "env\Scripts" (In cmd you can use "where python" and see where it is)
+4. Install required packages via pip (here are "flask" and "flask-sqlalchemy")
+Note1: You can install required packages listed in .txt file via: "python -m pip install -r requirements.txt"
+Note2: Installed libraries should be visible in "env\Lib\site-packages" folder
+Note3: Don't use "py -3 -m pip install ...". Here our python.exe is in folder "env\Scripts" (In cmd you can use "where python" and see where it is)
 	So just simply use "python -m pip install ..."
 		
 5. Run prepared scipt with:
@@ -57,6 +58,7 @@ c) Copy complete virtualenv to another pc (https://stackoverflow.com/questions/3
 - Enable virtualenv (3rd point),
 - Create requirements file: "python -m pip freeze > requirements.txt",
 2) On other pc:
-- Copy "requirements.txt" from source machine to destination pc,
+- Copy "requirements.txt" from source machine to destination pc (into the root folder of the project),
 - Enable virtualenv (3rd point),
-- Install requirements: "python -m pip install -r requirements.txt".
+- Install requirements: "python -m pip install -r requirements.txt",
+- Delete the "requirements.txt" file.
