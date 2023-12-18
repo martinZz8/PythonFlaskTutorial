@@ -1,6 +1,6 @@
 To run project in virtualenv, do those steps:
 1. Install "virtualenv" via pip
-Note: Yuo can also use "venv" instead of "virtualenv". But "virtualenv" is more popular and powerful than "venv".
+Note: You can also use "venv" instead of "virtualenv". But "virtualenv" is more popular and powerful than "venv".
 
 2. Create virtualenv "env" folder by using:
 	"py -3 -m virtualenv env"
