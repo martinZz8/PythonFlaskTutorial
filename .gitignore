@@ -1,9 +1,7 @@
 # folders
+.idea/
 env/
-src/__pycache__/
-src/models/__pycache__/
-src/shared/__pycache__/
-src/instance/
+*__pycache__/
 
 # files
 .env

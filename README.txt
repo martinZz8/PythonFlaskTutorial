@@ -13,7 +13,8 @@ Note: You can also use "venv" instead of "virtualenv". But "virtualenv" is more 
 Note1: 	When "Script cannot be loaded because running scripts is disabled on this system" run in cmd: "powershell Set-ExecutionPolicy RemoteSigned"
 	After all you can deactivate this policy by running in cmd: "powershell Set-ExecutionPolicy Restricted"
 	from: https://stackoverflow.com/questions/4037939/powershell-says-execution-of-scripts-is-disabled-on-this-system
-Note2: 	1) "./script" runs the script as an executable file, launching a new shell to run it
+Note2:
+	1) "./script" runs the script as an executable file, launching a new shell to run it
 	2) ". script" or "source script" reads and executes commands from filename in the current shell environment
 		
 4. Install required packages via pip (here are "flask" and "flask-sqlalchemy")
@@ -45,13 +46,13 @@ b) Updating database (https://flask-migrate.readthedocs.io/en/latest/):
 - Enable virtualenv (3rd point),
 - Move to "src" folder,
 - Install pip "Flask-Migrate" package,
-- In project import "flask_migrate" from "Migrate" and create instation of migration: "migrate = Migrate(app, db)",
+- In project import "flask_migrate" from "Migrate" and create instantion of migration: "migrate = Migrate(app, db)",
 - In opened virtualenv terminal do:
 	- Create migration repository: "python -m flask db init",
 	- Generate initial migration: "python -m flask db migrate -m 'Initial migration.'",
 	- Apply changes described in migration script to db: "python -m flask db upgrade".	
 
-Each time the database models change, repeat the "migrate" and "upgrade" commands.
+Each time the database models change, repeat the "migrate" and "upgrade" commands (without "db init" command).
 
 c) Copy complete virtualenv to another pc (https://stackoverflow.com/questions/34993200/copy-complete-virtualenv-to-another-pc):
 1) On source machine:
