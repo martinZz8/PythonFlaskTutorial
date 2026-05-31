@@ -5,6 +5,7 @@ Note: You can also use "venv" instead of "virtualenv". But "virtualenv" is more 
 2. Create virtualenv "env" folder by using:
 	"py -3 -m virtualenv env"
 	on linux: "virtualenv env"
+	Note: We're using here Python 3.9.6 for virtualenv, but can be used newer or we can use instead Conda env.
 	
 3. Activate virtualenv:
 	"env\Scripts\activate" (.ps1 - PowerShell script)
@@ -59,7 +60,6 @@ c) Copy complete virtualenv to another pc (https://stackoverflow.com/questions/3
 - Enable virtualenv (3rd point),
 - Create requirements file: "python -m pip freeze > requirements.txt",
 2) On other pc:
-- Copy "requirements.txt" from source machine to destination pc (into the root folder of the project),
+- Copy "requirements.txt" from source machine to destination pc (into the root folder of the project) - it can be downloaded from the repository,
 - Enable virtualenv (3rd point),
-- Install requirements: "python -m pip install -r requirements.txt",
-- Delete the "requirements.txt" file.
+- Install requirements: "python -m pip install -r requirements.txt".
